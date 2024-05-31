@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        const routes = {
+            'jpg/png': 'https://example.com/convert/jpg-to-png',
+            'png/jpg': 'https://example.com/convert/png-to-jpg'
+            // Add more routes as needed
+        };
+
+        const path = window.location.pathname.slice(1); // Remove the leading '/'
+        if (routes[path]) {
+            window.location.href = routes[path];
+        } else {
+            document.body.innerHTML = '<h1>404 - Not Found</h1>';
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
