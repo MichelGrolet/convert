@@ -12,6 +12,7 @@
         };
 
         const path = window.location.pathname.slice(1); // Remove the leading '/'
+        console.log(path);
         if (routes[path]) {
             window.location.href = routes[path];
         } else {
